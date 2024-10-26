@@ -12,18 +12,16 @@ export class DashboardPage {
         await expect(this.menuButton).toBeVisible();
     }
 
-    // Menambahkan metode untuk menambahkan item ke keranjang
     async addItemToCart() {
         const itemButton = this.page.locator('[data-test="add-to-cart-sauce-labs-backpack"]'); // Ganti sesuai kebutuhan
-        await expect(itemButton).toBeVisible(); // Verifikasi tombol Add to Cart terlihat
-        await itemButton.click(); // Klik tombol Add to Cart
+        await expect(itemButton).toBeVisible(); 
+        await itemButton.click(); 
     }
 
-    // Menambahkan metode untuk membuka keranjang
     async goToCart() {
         await this.page.waitForTimeout(1000);
         const cartButton = this.page.getByRole('link', { name: 'Cart' });
-        await expect(cartButton).toBeVisible(); // Verifikasi tombol keranjang terlihat
-        await cartButton.click(); // Klik tombol keranjang
+        await expect(cartButton).toBeVisible(); 
+        await cartButton.click();
     }
 }
