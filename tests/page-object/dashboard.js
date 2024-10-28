@@ -10,6 +10,7 @@ export class DashboardPage {
     async validateOnPage() {
         await expect(this.pageTitle).toBeVisible();
         await expect(this.menuButton).toBeVisible();
+        // await expect(this.page).toHaveScreenshot('dashboard-page.png') 
     }
 
     async addItemToCart() {
